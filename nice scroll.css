@@ -10,15 +10,7 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
-}
-
-::-webkit-scrollbar-track {
-  background: #eee;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #3a3a3a;
+  display: none;
 }
 
 body {
