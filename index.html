@@ -12,14 +12,13 @@
         <section>Hello</section>
         <section>Welcome</section>
         <section>OK Bye</section>
-        <button onclick="toggle()"><span>Toggle</span></button>
+        <button onclick="classToggle()"><span>Toggle</span></button>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-        var cantainer = document.querySelector(".container")
-        function toggle() {
-            $(".container").toggleClass("horizon");
-            $(".container").toggleClass("vertical");
+        function classToggle() {
+            let mainDiv = document.querySelector(".container");
+            mainDiv.classList.toggle("horizon");
+            mainDiv.classList.toggle("vertical");
         }
     </script>
 </body>
