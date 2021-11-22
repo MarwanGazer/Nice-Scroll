@@ -11,7 +11,7 @@ html {
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 10px;
     height: 5px;
 }
 
@@ -21,6 +21,8 @@ html {
 
 ::-webkit-scrollbar-thumb {
     background: rgb(58, 58, 58);
+    width: 5px;
+    height: 5px;
 }
 
 body {
