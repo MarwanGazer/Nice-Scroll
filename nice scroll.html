@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nice Scroll</title>
+    <link rel="stylesheet" href="nice scroll.css">
+</head>
+<body>
+    <div class="container vertical">
+        <section>Hello</section>
+        <section>Welcome</section>
+        <section>OK Bye</section>
+        <button onclick="toggle()"><span>Toggle</span></button>
+    </div>
+    <script src="../../jQuery/jquery-migrate-3.3.2.min.js"></script>
+    <script>
+        var cantainer = document.querySelector(".container")
+        function toggle() {
+            $(".container").toggleClass("horizon");
+            $(".container").toggleClass("vertical");
+        }
+    </script>
+</body>
+</html>

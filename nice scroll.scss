@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+
+* {
+    text-transform:capitalize;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(58, 58, 58);
+}
+
+body {
+    height: 100vh;
+    font-size: 50px;
+    font-family: 'Tangerine', cursive;
+
+    .container {
+        height: 100%;
+        width: 100%;
+
+        section {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: start;
+
+            &:nth-of-type(1) {
+                background-color: #1c1c1c;
+                color: green;
+            }
+
+            &:nth-of-type(2) {
+                background-color: #262626;
+                color: gray;
+            }
+
+            &:nth-of-type(3) {
+                background-color: #303030;
+                color: yellow;
+            }
+        }
+    }
+
+    button {
+        font-family: 'Tangerine', cursive;
+        overflow: hidden;
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        background: none;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        height: 50px;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 50%;
+            width: 200%;
+            background: linear-gradient(rgb(60, 60, 30), rgb(20, 50, 70));
+            animation: rotate 2s linear infinite forwards;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: #202020;
+            inset: 4px;
+            border-radius: inherit;
+        }
+
+        span {
+            z-index: 10;
+        }
+    }
+}
+
+.vertical {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+.horizon {
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    display: flex;
+    overflow-y: hidden;
+
+    section {
+        flex: none;
+    }
+}
+
+
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}

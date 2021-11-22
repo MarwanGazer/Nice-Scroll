@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap");
+* {
+  text-transform: capitalize;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a3a3a;
+}
+
+body {
+  height: 100vh;
+  font-size: 50px;
+  font-family: 'Tangerine', cursive;
+}
+
+body .container {
+  height: 100%;
+  width: 100%;
+}
+
+body .container section {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  scroll-snap-align: start;
+}
+
+body .container section:nth-of-type(1) {
+  background-color: #1c1c1c;
+  color: green;
+}
+
+body .container section:nth-of-type(2) {
+  background-color: #262626;
+  color: gray;
+}
+
+body .container section:nth-of-type(3) {
+  background-color: #303030;
+  color: yellow;
+}
+
+body button {
+  font-family: 'Tangerine', cursive;
+  overflow: hidden;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  height: 50px;
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 25px;
+}
+
+body button::before {
+  content: "";
+  position: absolute;
+  height: 50%;
+  width: 200%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#3c3c1e), to(#143246));
+  background: linear-gradient(#3c3c1e, #143246);
+  -webkit-animation: rotate 2s linear infinite forwards;
+          animation: rotate 2s linear infinite forwards;
+}
+
+body button::after {
+  content: "";
+  position: absolute;
+  background-color: #202020;
+  inset: 4px;
+  border-radius: inherit;
+}
+
+body button span {
+  z-index: 10;
+}
+
+.vertical {
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.horizon {
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-y: hidden;
+}
+
+.horizon section {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+}
+
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=nice scroll.css.map */
